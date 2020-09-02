@@ -11,15 +11,15 @@ class Weather extends Component {
         this.state = {
             value: ""
         }
-    }
+    };
 
     componentWillMount = () => {
         this.props.FetchAPIResponse("Paris");
-    }
+    };
 
     search = () => {
         this.props.FetchAPIResponse(this.state.value);
-    }
+    };
     // EVENT 
     changeHandler = (e) => {
         const value = e.target.value;
@@ -27,7 +27,7 @@ class Weather extends Component {
             value: value
         });
 
-    }
+    };
 
     render() {
         return (
@@ -111,11 +111,11 @@ function mapStateToProps(state) {
         apiLocation: state.FetchWeatherLocation.location,
         apiConditions: state.FetchCurrentConditions.conditions
     }
-}
+};
 
 function matchDispatchToProps(dispatch) {
-    return bindActionCreators({ FetchAPIResponse: fetchAPIResponse }, dispatch);
-}
+    return bindActionCreators({ FetchAPIResponse: fetchAPIResponse }, dispatch)
+};
 
 export default connect(mapStateToProps, matchDispatchToProps)(Weather);
 
