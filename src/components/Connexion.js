@@ -8,22 +8,22 @@ class Connexion extends Component {
     state = {
         pseudo: '',
         goToMyApp: false
-    };
+    }
 
     handleChange = event => {
         const pseudo = event.target.value
         this.setState({ pseudo })
-    };
+    }
 
     goToMyApp = event => {
         event.preventDefault()
         this.setState({ goToMyApp: true })
-    };
+    }
 
     render() {
-        if (this.state.goToMyApp) {
+        if (this.state.goToMyApp) 
             return <Redirect push to={`/pseudo/${this.state.pseudo}`} />
-        };
+    
         return (
             <div className='connexionBox'>
                 <form className='connexion' onSubmit={this.goToMyApp}>
@@ -35,11 +35,11 @@ class Connexion extends Component {
                         onChange={this.handleChange}
                         placeholder='pseudo'
                         pattern='[A-Za-z-]{1,}'
-                        size="large"
+                        size='large'
                         required
                         prefix={<UserOutlined />} />
 
-                    <Button type='primary'>Go</Button>
+                    <Button type='primary' htmlType='submit'>Go</Button>
                     <p>Pas de caractères spéciaux.</p>
                 </form>
             </div>

@@ -5,7 +5,7 @@ const fetchWeatherData = (
     },
     action) => {
 
-    if (action.type === "FETCH_WEATHER") {
+    if (action.type === "SET_WEATHER") {
         state = { ...state, weatherData: action.payload }
     }
 
