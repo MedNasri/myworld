@@ -8,17 +8,17 @@ class Connexion extends Component {
     state = {
         pseudo: '',
         goToMyApp: false
-    }
+    };
 
     handleChange = event => {
         const pseudo = event.target.value
         this.setState({ pseudo })
-    }
+    };
 
     goToMyApp = event => {
         event.preventDefault()
         this.setState({ goToMyApp: true })
-    }
+    };
 
     render() {
         if (this.state.goToMyApp) 
