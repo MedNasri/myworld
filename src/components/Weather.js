@@ -68,10 +68,10 @@ class Weather extends Component {
 
                         <div className='square'>
                             <p>Condition</p>
-                            <p className='data'>{this.props.apiConditions.weather_descriptions}</p>
+                            <p className='data'>{this.props.apiResponse.weather_descriptions}</p>
                         </div>
                         <div className='square'>
-                            <img src={this.props.apiConditions.weather_icons} alt='current weather condition icon' />
+                            <img src={this.props.apiResponse.weather_icons} alt='current weather condition icon' />
                         </div>
 
                     </div>
@@ -111,7 +111,7 @@ function mapStateToProps(state) {
     return {
         apiResponse: state.FetchWeatherReducer.weatherData,
         apiLocation: state.FetchWeatherLocation.location,
-        apiConditions: state.FetchCurrentConditions.conditions
+        
     }
 };
 
