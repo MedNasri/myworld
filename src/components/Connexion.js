@@ -45,6 +45,6 @@ class Connexion extends Component {
             </div>
         );
     }
-}
+};
 
 export default Connexion;

@@ -42,24 +42,24 @@ class Weather extends Component {
                 </div>
                 <div className='dashboard'>
 
-                    <h2><i className='fas fa-chart-bar'></i> Dashboard </h2>
+                    <h3><i className='fas fa-chart-bar'></i> Dashboard </h3>
                     <h2><i className='far fa-compass'></i> Location</h2>
                     <div className='data-container'>
                         <div className='square'>
                             <p>City</p>
-                            <p className='data'>{this.props.apiLocation[0]}</p>
+                            <p className='data'>{this.props.apiLocation.name}</p>
                         </div>
                         <div className='square'>
                             <p>Country</p>
-                            <p className='data'>{this.props.apiLocation[2]}</p>
+                            <p className='data'>{this.props.apiLocation.country}</p>
                         </div>
                         <div className='square'>
                             <p>Time Zone Id</p>
-                            <p className='data'>{this.props.apiLocation[5]}</p>
+                            <p className='data'>{this.props.apiLocation.timezone_id}</p>
                         </div>
                         <div className='square'>
                             <p>Local Time</p>
-                            <p className='data'>{this.props.apiLocation[6]}</p>
+                            <p className='data'>{this.props.apiLocation.localtime}</p>
                         </div>
                     </div>
 
@@ -68,10 +68,10 @@ class Weather extends Component {
 
                         <div className='square'>
                             <p>Condition</p>
-                            <p className='data'>{this.props.apiConditions[4]}</p>
+                            <p className='data'>{this.props.apiConditions.weather_descriptions}</p>
                         </div>
                         <div className='square'>
-                            <img src={this.props.apiConditions[0]} alt='current weather condition icon' />
+                            <img src={this.props.apiConditions.weather_icons} alt='current weather condition icon' />
                         </div>
 
                     </div>
@@ -82,20 +82,20 @@ class Weather extends Component {
 
                         <div className='square'>
                             <p>Clouds</p>
-                            <p className='data'>{this.props.apiResponse[11]} %</p>
+                            <p className='data'>{this.props.apiResponse.cloudcover} %</p>
 
                         </div>
                         <div className='square'>
                             <p>Feels like (Celcius)</p>
-                            <p className='data'>{this.props.apiResponse[1]} °C</p>
+                            <p className='data'>{this.props.apiResponse.temperature} °C</p>
                         </div>
                         <div className='square'>
                             <p>Feels like (Fahrenheit)</p>
-                            <p className='data'>{this.props.apiResponse[10]} °F</p>
+                            <p className='data'>{this.props.apiResponse.feelslike} °F</p>
                         </div>
                         <div className='square'>
                             <p>Humidity</p>
-                            <p className='data'>{this.props.apiResponse[10]} %</p>
+                            <p className='data'>{this.props.apiResponse.humidity} %</p>
                         </div>
 
                     </div>
