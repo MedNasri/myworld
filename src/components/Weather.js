@@ -110,8 +110,7 @@ function mapStateToProps(state) {
     //state.ReducerName.reducerProperty
     return {
         apiResponse: state.FetchWeatherReducer.weatherData,
-        apiLocation: state.FetchWeatherLocation.location,
-        
+        apiLocation: state.FetchWeatherLocation.location
     }
 };
 
