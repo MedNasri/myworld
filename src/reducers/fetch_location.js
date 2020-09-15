@@ -1,11 +1,12 @@
-const fetchLocation = (state = {
+const defaultState = {
     location: []
-}, action) => {
-    if (action.type === "FETCH_LOCATION") {
-        state = { ...state, location: action.payload }
-    }
-
-    return state;
 };
-
+const fetchLocation = (state = defaultState, action) => {
+    switch (action.payload) {
+        case "FETCH_LOCATION":
+            return { ...state, location: action.payload };
+        default:
+            return state;
+    }
+};
 export default fetchLocation;

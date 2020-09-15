@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 // API
-import { fetchWeatherByCity } from '../actions/WeatherActions ';
+import { fetchWeatherByCity } from '../actions/WeatherActions';
 // CSS
 import '../styles/weather.css';
 
@@ -36,12 +36,10 @@ class Weather extends Component {
             <div className='container'>
                 <h1>Weather App </h1>
                 <div className='form'>
-
                     <input name='city' placeholder='Paris' onChange={this.changeHandler} />
                     <button onClick={this.search}> <i className='fas fa-search'></i> </button>
                 </div>
                 <div className='dashboard'>
-
                     <h3><i className='fas fa-chart-bar'></i> Dashboard </h3>
                     <h2><i className='far fa-compass'></i> Location</h2>
                     <div className='data-container'>
@@ -62,10 +60,8 @@ class Weather extends Component {
                             <p className='data'>{this.props.apiLocation.localtime}</p>
                         </div>
                     </div>
-
                     <h2><i className='fas fa-tint'></i> Current Conditions</h2>
                     <div className='data-container'>
-
                         <div className='square'>
                             <p>Condition</p>
                             <p className='data'>{this.props.apiResponse.weather_descriptions}</p>
@@ -73,17 +69,12 @@ class Weather extends Component {
                         <div className='square'>
                             <img src={this.props.apiResponse.weather_icons} alt='current weather condition icon' />
                         </div>
-
-                    </div>
-
-
+                      </div>
                     <h2><i className='fas fa-thermometer-quarter'></i> Other Conditions </h2>
                     <div className='data-container'>
-
                         <div className='square'>
                             <p>Clouds</p>
                             <p className='data'>{this.props.apiResponse.cloudcover} %</p>
-
                         </div>
                         <div className='square'>
                             <p>Feels like (Celcius)</p>
@@ -97,9 +88,7 @@ class Weather extends Component {
                             <p>Humidity</p>
                             <p className='data'>{this.props.apiResponse.humidity} %</p>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         );

@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//CSS && Bootstrap
+//Css && Bootstrap
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //Store && Router
 import StoreRef from './store/store';
 import { Provider } from 'react-redux';
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
-// COMPONENTS
+// Components
 import App from './App';
 import Header from './components/Header';
 import NotFound from './components/NotFound';
@@ -21,7 +21,7 @@ import Connexion from './components/Connexion';
         <BrowserRouter>
           <Header/>
              <Switch>
-                 <Route exact path='/' component={Connexion} />
+                <Route exact path='/' component={Connexion} />
                 <Route exact path='/pseudo/:pseudo' component={App} />
                 <Route exact path='/notes' component={Notes} />
                 <Route exact path='/weather' component={Weather} />

@@ -31,6 +31,7 @@ class Notes extends Component {
         const __html = marked(text, { sanitize: true })
         return { __html }
     };
+
     render() {
         return (
             <div className='container'>
@@ -47,8 +48,7 @@ class Notes extends Component {
                     </div>
                 </div>
             </div>
-
-        );
+         );
     }
 }
 
