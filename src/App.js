@@ -1,13 +1,12 @@
-import './App.css';
+import '../src/ressources/styles/App.css';
 import React, { Component } from 'react';
 
 class App extends Component {
     render() {
-        return (
-     <h1>welcome</h1>
-        );
+        return <h1>welcome</h1>
+        
     }
-}
+};
 
 export default App;
 

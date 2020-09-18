@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 //Css && Bootstrap
-import './index.css';
+import '../src/ressources/styles/index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //Store && Router
-import StoreRef from './store/store';
+import StoreRef from './Redux/store/store';
 import { Provider } from 'react-redux';
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
 // Components

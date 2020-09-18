@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Formulaire from './Formulaire';
 import Message from './Message';
-import '../styles/box.css';
+import '../ressources/styles/box.css';
+
 class Teams extends Component {
     state = {
         messages: {}
@@ -44,7 +45,6 @@ class Teams extends Component {
 
                 />
             </div>
-
         );
     }
 }

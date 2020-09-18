@@ -9,7 +9,7 @@
     box-shadow: 0px 10px 34px -7px rgba(0,0,0,0.75);
     border-left:20px solid #020101a4; 
     position: relative;
-    background: #222 url("./692033-PQIL2D-509.jpg");
+    background: #222 url('../images/692033-PQIL2D-509.jpg');
   }
   
   .container h1 {

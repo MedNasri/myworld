@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 // API
-import { fetchWeatherByCity } from '../actions/WeatherActions';
+import { fetchWeatherByCity } from '../Redux/actions/WeatherActions';
 // CSS
-import '../styles/weather.css';
+import '../ressources/styles/weather.css';
 
 class Weather extends Component {
     constructor() {
@@ -36,7 +36,7 @@ class Weather extends Component {
             <div className='container'>
                 <h1>Weather App </h1>
                 <div className='form'>
-                    <input name='city' placeholder='Paris' onChange={this.changeHandler} />
+                    <input name='city' placeholder='Belgium' onChange={this.changeHandler} />
                     <button onClick={this.search}> <i className='fas fa-search'></i> </button>
                 </div>
                 <div className='dashboard'>
