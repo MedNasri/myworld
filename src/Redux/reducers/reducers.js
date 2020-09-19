@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 //import the reducers 
-import FetchLocation from './LocationReducer';
+import LocationReducer from './LocationReducer';
 import fetchWeatherData from './WeatherReducer';
 //combine reducers
 const reducers = combineReducers({
 
     FetchWeatherReducer: fetchWeatherData,
-    FetchWeatherLocation: FetchLocation
+    LocationReducer: LocationReducer
 
 });
 

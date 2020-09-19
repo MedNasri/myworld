@@ -4,7 +4,7 @@ const defaultState = {
     location: []
 };
 
-const fetchLocation = (state = defaultState, action) => {
+const LocationReducer = (state = defaultState, action) => {
     switch (action.type) {
         case FETCH_LOCATION : {
             return { ...state, location: action.payload };
@@ -14,7 +14,7 @@ const fetchLocation = (state = defaultState, action) => {
     }
 };
 
-export default fetchLocation;
+export default LocationReducer;
 
   
 
