@@ -28,7 +28,6 @@ class Weather extends Component {
         this.setState({
             value: value
         })
-
     };
 
     render() {

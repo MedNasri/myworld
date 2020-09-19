@@ -15,7 +15,6 @@ class Teams extends Component {
     };
 
     render() {
-
         const messages = Object
             .keys(this.state.messages)
             .map(key => (
@@ -26,9 +25,8 @@ class Teams extends Component {
                     pseudo={this.state.messages[key].pseudo}
                 />
             ))
-        console.log(messages)
-
-        return (
+        
+         return (
             <div className='box' >
                 <div>
                     <div className='messages'>

@@ -5,11 +5,13 @@ const defaultState = {
 };
 
 const fetchWeatherData = (state = defaultState, action) => {
-    if (action.type === SET_WEATHER) {
-        state = { ...state, weatherData: action.payload }
+    switch (action.type) {
+        case SET_WEATHER : {
+            return { ...state, weatherData: action.payload };
+          }
+        default:
+            return state;
     }
-    return state;
 };
 
 export default fetchWeatherData;
-
