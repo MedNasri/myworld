@@ -9,7 +9,6 @@ class Notes extends Component {
 
     componentDidMount() {
         const text = localStorage.getItem('text')
-
         if (text) {
             this.setState({ text })
         } else {

@@ -15,6 +15,7 @@ import Notes from './components/Notes';
 import Weather from './components/Weather';
 import Teams from './components/Teams';
 import Connexion from './components/Connexion';
+import WeatherT from './components/WeatherT';
 
  const Root =() =>(
    <Provider store={StoreRef}>
@@ -25,6 +26,7 @@ import Connexion from './components/Connexion';
                 <Route exact path='/pseudo/:pseudo' component={App} />
                 <Route exact path='/notes' component={Notes} />
                 <Route exact path='/weather' component={Weather} />
+                <Route exact path='/weathert' component={WeatherT} />
                 <Route exact path='/teams' component={Teams} />
                 <Route component={NotFound} />
             </Switch>
