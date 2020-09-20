@@ -17,7 +17,6 @@ const WeatherT = () => {
     const changeHandler = (e) => {
         const Country = e.target.value;
         setCountry(Country);
-
     };
 
     const search = () => {
