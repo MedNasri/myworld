@@ -4,7 +4,7 @@ const defaultState = {
     weatherData: []
 };
 
-const fetchWeatherData = (state = defaultState, action) => {
+const WeatherReducer = (state = defaultState, action) => {
     switch (action.type) {
         case SET_WEATHER : {
             return { ...state, weatherData: action.payload };
@@ -14,4 +14,4 @@ const fetchWeatherData = (state = defaultState, action) => {
     }
 };
 
-export default fetchWeatherData;
+export default WeatherReducer;

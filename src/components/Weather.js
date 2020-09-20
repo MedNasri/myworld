@@ -97,7 +97,7 @@ class Weather extends Component {
 function mapStateToProps(state) {
     //state.ReducerName.reducerProperty
     return {
-        apiResponse: state.FetchWeatherReducer.weatherData,
+        apiResponse: state.WeatherReducer.weatherData,
         apiLocation: state.LocationReducer.location
     }
 };

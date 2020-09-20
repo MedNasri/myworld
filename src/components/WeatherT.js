@@ -5,9 +5,9 @@ import '../ressources/styles/weather.css';
 
 const WeatherT = () => {
 
-    const [value, setcountry] = useState('');   
+    const [Country, setCountry] = useState(null);   
     const dispatch = useDispatch();
-    const apiResponse = useSelector (Store=>Store.FetchWeatherReducer.weatherData);
+    const apiResponse = useSelector (Store=>Store.WeatherReducer.weatherData);
     const apiLocation = useSelector (Store=>Store.LocationReducer.location);
 
     useEffect(() => {
@@ -15,13 +15,13 @@ const WeatherT = () => {
     })
 
     const changeHandler = (e) => {
-        const value = e.target.value;
-        setcountry(value);
+        const Country = e.target.value;
+        setCountry(Country);
 
     };
 
     const search = () => {
-        fetchWeatherByCity(value);
+        fetchWeatherByCity(Country);
     };
        
     return ( 
